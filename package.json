@@ -1,5 +1,34 @@
 {
+  "name": "maxibon_kata_javascript",
+  "version": "1.0.0",
+  "description": "Maxibon kata for Javascript developers. The main goal is to practice property based testing.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jsverify": "^0.8.4"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "mocha src"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nando/MaxibonKataJavascript.git"
+  },
+  "keywords": [
+    "kata",
+    "property-based",
+    "testing",
+    "javascript",
+    "mocha",
+    "jsverify"
+  ],
+  "author": "Fernando García Samblas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nando/MaxibonKataJavascript/issues"
+  },
+  "homepage": "https://github.com/nando/MaxibonKataJavascript#readme"
 }
