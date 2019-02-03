@@ -7,10 +7,6 @@ class Developer {
     this.maxibons_to_grab = Math.max( 0, maxibons_to_grab );
   }
 
-  name () {
-    return this.name;
-  }
-
   maxibonsToGrab() {
     return this.maxibons_to_grab;
   }
@@ -21,11 +17,18 @@ const jsc = require('jsverify')
 
 describe('Developer', () => {
   it('should always grab a positive number of maxibons', () => {
-   jsc.assertForall( jsc.integer,
-                     ( maxibons_to_grab ) => {
-       const dev = new Developer( "Ada", maxibons_to_grab );
-       return dev.maxibonsToGrab() >= 0
-     }
-   )
+    jsc.assertForall( jsc.integer,
+                      ( maxibons_to_grab ) => {
+      const dev = new Developer( "Ada", maxibons_to_grab );
+      return dev.maxibonsToGrab() >= 0
+    })
+  })
+
+  it('should assign the name of the developer in construction', () => {
+    jsc.assertForall( jsc.asciinestring,
+                      ( name ) => {
+      const dev = new Developer( name, 1 );
+      return dev.name === name
+    })
   })
 })
