@@ -19,8 +19,7 @@ export default class Developer {
     return this.maxibons_to_grab;
   }
 
-  static get( developer_name ) {
-    return Developer.developers()[ developer_name ]
+  static get( developer_key ) {
+    return Developer.developers()[ developer_key ]
   }
-
 }
