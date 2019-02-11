@@ -1,6 +1,7 @@
-const assert = require('assert');
-const jsc = require('jsverify')
 import Developer from '../src/Developer'
+
+const assert = require('assert');
+const jsc = require('jsverify');
 
 const karumiDev = jsc.record({
   name: jsc.asciinestring,
