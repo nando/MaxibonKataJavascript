@@ -1,5 +1,5 @@
+export const assert = require('chai').assert;
 export const jsc = require('jsverify');
-export const assert = require('assert');
 
 export const karumiDev = jsc.record({
   name: jsc.asciinestring,
