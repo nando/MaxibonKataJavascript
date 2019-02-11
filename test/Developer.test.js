@@ -1,5 +1,5 @@
 import { jsc,
-         assert,
+         expect,
          unpredictableDev,
          karumiDev } from './helper'
 import Developer from '../src/Developer'
@@ -34,7 +34,9 @@ describe('Developer', () => {
     }
     Object.keys( karumies ).forEach( function (key) {
       maxibons_to_grab = karumies[ key ]
-      assert.equal( maxibons_to_grab, Developer.get( key ).maxibonsToGrab() )
+      expect( Developer.get( key ).maxibonsToGrab() ).
+        to.
+        equal( maxibons_to_grab );
     })
   })
 })

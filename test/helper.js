@@ -1,4 +1,4 @@
-export const assert = require('chai').assert;
+export const expect = require('chai').expect;
 export const jsc = require('jsverify');
 
 export const karumiDev = jsc.record({
