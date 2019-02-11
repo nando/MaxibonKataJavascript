@@ -1,17 +1,8 @@
+import { jsc,
+         assert,
+         unpredictableDev,
+         karumiDev } from './helper'
 import Developer from '../src/Developer'
-
-const assert = require('assert');
-const jsc = require('jsverify');
-
-const karumiDev = jsc.record({
-  name: jsc.asciinestring,
-  maxibons_to_grab: jsc.integer( 0, 3 )
-})
-
-const unpredictableDev = jsc.record({
-  name: jsc.asciinestring,
-  maxibons_to_grab: jsc.integer
-})
 
 describe('Developer', () => {
   it('should always grab a positive number of maxibons', () => {
