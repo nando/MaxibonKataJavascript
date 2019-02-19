@@ -22,6 +22,14 @@ export default class KarumiHQs {
 
   grab_maxibons( developer ) {
     this.maxibons_left =- Math.max( 0, developer.maxibonsToGrab() );
+    /* DISCLAIMER: **LAST LINE IS BUG!!**
+     * It's kept in order to give a try to Stryker(*). Its fixed version
+     * would be this one:
+     *
+     * this.maxibons_left = Math.max(0, this.maxibons_left -
+     *                                  developer.maxibonsToGrab());
+     *
+     * * https://stryker-mutator.io/                                    */
   }
 
   buy_maxibons() {
